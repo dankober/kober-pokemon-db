@@ -1,0 +1,29 @@
+{
+  "name": "kober-pokemon-db",
+  "version": "1.0.0",
+  "description": "Playing with Dialogflow",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dankober/kober-pokemon-db.git"
+  },
+  "keywords": [
+    "pokemon"
+  ],
+  "author": "Dan Kober",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dankober/kober-pokemon-db/issues"
+  },
+  "homepage": "https://github.com/dankober/kober-pokemon-db#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
