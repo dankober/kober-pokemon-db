@@ -10,7 +10,7 @@ exports.intent = function(agent) {
   }
 
   const results = pokemonList.pokemon.filter(
-    p => p.Name.toUpperCase === pokemon.toUpperCase
+    p => p.Name.toUpperCase() === pokemon.toUpperCase()
   );
   if (results.length === 0) {
     agent.add("I don't have any information about that Pokemon");
