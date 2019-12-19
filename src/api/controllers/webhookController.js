@@ -8,8 +8,10 @@ const defaultWelcome = require("./intents/defaultWelcomeIntent");
 exports.handler = function(req, res) {
   const agent = new WebhookClient({ request: req, response: res });
 
+  console.log("Request Body:" + JSON.stringify(req.body));
+
   let intentMap = new Map();
-  
+
   // Set intents
   intentMap.set(
     "Default Welcome Intent",
