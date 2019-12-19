@@ -2,4 +2,5 @@
 
 exports.intent = function(agent) {
   agent.add("Welcome to Dan's Pokemon assistant");
+  console.log("Agent: " + JSON.stringify(agent));
 };
