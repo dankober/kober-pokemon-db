@@ -18,7 +18,7 @@ exports.handler = function(req, res) {
     "Default Welcome Intent",
     defaultWelcome.intent(agent, req, res)
   );
-  intentMap.set("pokemon.type", pokemonType.intent(agent, req, res));
+  //   intentMap.set("pokemon.type", pokemonType.intent(agent, req, res));
 
   agent.handleRequest(intentMap);
 };
