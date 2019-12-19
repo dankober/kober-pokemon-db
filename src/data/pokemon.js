@@ -17,5 +17,13 @@ exports.pokemon = [
   },
   { Name: "Pikachu", Type: ["Electric"] },
   { Name: "Snorlax", Type: ["Normal"] },
-  { Name: "Charmander", Type: ["Fire"] }
+  { Name: "Charmander", Type: ["Fire"] },
+  { Name: "Oddish", Type: ["Grass", "Poison"], EvolvesTo: "Gloom" },
+  {
+    Name: "Gloom",
+    Type: ["Grass", "Poison"],
+    EvolvesFrom: "Oddish",
+    EvolvesTo: "Vileplume"
+  },
+  { Name: "Vileplume", Type: ["Grass", "Poison"], EvolvesFrom: "Gloom" }
 ];

@@ -3,14 +3,16 @@
 const pokemonList = require("../../../data/pokemon");
 
 exports.intent = function(agent) {
-  const pokemon = agent.parameters["Pokemon"];
-  if (!pokemon) {
+  const searchPokemon = agent.parameters["Pokemon"];
+  const searchType = agent.parameters["Type"];
+
+  if (!searchPokemon) {
     agent.add("You didn't provide a Pokemon name");
     return;
   }
 
   const results = pokemonList.pokemon.filter(
-    p => p.Name.toUpperCase() === pokemon.toUpperCase()
+    p => p.Name.toUpperCase() === searchPokemon.toUpperCase()
   );
   if (results.length === 0) {
     agent.add("I don't have any information about that Pokemon");
@@ -23,5 +25,17 @@ exports.intent = function(agent) {
       ? foundPokemon.Type[0]
       : `${foundPokemon.Type[0]} and ${foundPokemon.Type[1]}`;
 
-  agent.add(`${pokemon} is a ${types} type`);
+  const answer = `${foundPokemon.Name} is a ${types} type`;
+
+  if (!searchType) {
+    agent.add(answer);
+  } else {
+    if (
+      foundPokemon.Type.filter(t => t.toUpperCase() === searchType.toUpperCase()).length > 0
+    ) {
+      agent.add(`Yes, ${answer}`);
+    } else {
+      agent.add(`No, ${answer}`);
+    }
+  }
 };
