@@ -2,7 +2,7 @@
 
 module.exports = function(app) {
   // Import controller routes here
-  var pokemonRoutes = require("./pokemonRoutes");
+  var pokemonRoutes = require("./defaultRoutes");
   var webhookRoutes = require("./webhookRoutes");
 
   // Execute the routes here
