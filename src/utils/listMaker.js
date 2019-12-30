@@ -6,7 +6,7 @@ exports.listMaker = function(array) {
   }
 
   var output = "";
-  for (index = 0; index < array.length - 1; index++) {
+  for (var index = 0; index < array.length - 1; index++) {
     output = output + `, ${array[index]}`;
   }
 
