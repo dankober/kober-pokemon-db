@@ -22,11 +22,20 @@ exports.intent = function(agent) {
   }
 
   if (!resistance) {
-    const strengths = listMaker.listMaker(firstType.StrongAgainst);
-    const weaknesses = listMaker.listMaker(firstType.WeakAgainst);
+    if (firstType.StrongAgainst) {
+      const strengths = listMaker.listMaker(firstType.StrongAgainst);
+      agent.add(`${firstType.Name} is strong against ${strengths}.`);
+    } else {
+      agent.add(`${firstType.Name} isn't strong against anything.`);
+    }
 
-    agent.add(`${firstType.Name} is strong against ${strengths}.`);
-    agent.add(`It is weak against ${weaknesses}.`);
+    if (firstType.WeakAgainst) {
+      const weaknesses = listMaker.listMaker(firstType.WeakAgainst);
+      agent.add(`It is weak against ${weaknesses}.`);
+    } else {
+      agent.add(`It isn't weak against anything`);
+    }
+
     return;
   }
 
