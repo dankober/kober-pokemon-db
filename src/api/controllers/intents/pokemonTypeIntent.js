@@ -1,6 +1,7 @@
 "use strict";
 
 const pokemonList = require("../../../data/pokemon");
+const listMaker = require("../../../utils/listMaker");
 
 exports.intent = function(agent) {
   const searchPokemon = agent.parameters["Pokemon"];
@@ -20,11 +21,7 @@ exports.intent = function(agent) {
   }
 
   const foundPokemon = results[0];
-  const types =
-    foundPokemon.Type.length === 1
-      ? foundPokemon.Type[0]
-      : `${foundPokemon.Type[0]} and ${foundPokemon.Type[1]}`;
-
+  const types = listMaker.listMaker(foundPokemon.Type);
   const answer = `${foundPokemon.Name} is a ${types} type`;
 
   if (!searchType) {
