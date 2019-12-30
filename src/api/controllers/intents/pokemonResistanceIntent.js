@@ -22,8 +22,8 @@ exports.intent = function(agent) {
   }
 
   if (!resistance) {
-    const strengths = listMaker(firstType.StrongAgainst);
-    const weaknesses = listMaker(firstType.WeakAgainst);
+    const strengths = listMaker.listMaker(firstType.StrongAgainst);
+    const weaknesses = listMaker.listMaker(firstType.WeakAgainst);
 
     agent.add(`${firstType.Name} is strong against ${strengths}.`);
     agent.add(`It is weak against ${weaknesses}.`);
