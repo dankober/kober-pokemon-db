@@ -4,8 +4,8 @@ const typeList = require("../../../data/types");
 const listMaker = require("../../../utils/listMaker");
 
 exports.intent = function(agent) {
-  const firstType = agent.parameters["Type1"];
-  const secondType = agent.parameters["Type2"];
+  var firstType = agent.parameters["Type1"];
+  var secondType = agent.parameters["Type2"];
   const resistance = agent.parameters["Resistance"];
 
   if (!firstType) {
