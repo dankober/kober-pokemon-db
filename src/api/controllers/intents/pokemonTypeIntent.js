@@ -2,6 +2,7 @@
 
 const pokemonList = require("../../../data/pokemon");
 const listMaker = require("../../../utils/listMaker");
+const resistanceIntent = require("./pokemonResistanceIntent");
 
 exports.intent = function(agent) {
   const searchPokemon = agent.parameters["Pokemon"];
@@ -35,4 +36,11 @@ exports.intent = function(agent) {
       agent.add(`No, ${answer}`);
     }
   }
+  
+  foundPokemon.Type.forEach(element => {
+    agent.parameters["Type1"] = element;  
+    resistanceIntent.intent(agent);
+  });
+
+  
 };

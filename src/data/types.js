@@ -17,5 +17,15 @@ exports.types = [
     Name: "Fire",
     StrongAgainst: ["Grass", "Ice", "Bug", "Steel"],
     WeakAgainst: ["Water", "Ground", "Rock"]
+  },
+  {
+    Name: "Electric",
+    StrongAgainst: ["Water", "Flying"],
+    WeakAgainst: ["Ground"]
+  },
+  {
+    Name: "Ice",
+    StrongAgainst: ["Grass", "Ground", "Flying", "Dragon"],
+    WeakAgainst: ["Fire", "Fighting", "Rock", "Steel"]
   }
 ];
