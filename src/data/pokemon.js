@@ -25,5 +25,6 @@ exports.pokemon = [
     EvolvesFrom: "Oddish",
     EvolvesTo: "Vileplume"
   },
-  { Name: "Vileplume", Type: ["Grass", "Poison"], EvolvesFrom: "Gloom" }
+  { Name: "Vileplume", Type: ["Grass", "Poison"], EvolvesFrom: "Gloom" },
+  { Name: "Pinsir", Type: ["Normal", "Bug"]}
 ];
