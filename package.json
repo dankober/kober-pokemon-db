@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/dankober/kober-pokemon-db#readme",
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "node-forge": ">=0.10.0"
   },
   "dependencies": {
     "actions-on-google": "~2.13.0",
